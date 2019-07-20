@@ -34,12 +34,6 @@ public final class Core extends JavaPlugin {
     public void onLoad() {
         instance = this;
         connect();
-
-        teams = Bukkit.getScoreboardManager().getNewScoreboard();
-        for (ChatColor c : ChatColor.values()){
-            Team team = teams.registerNewTeam(c.toString());
-            team.setPrefix(c.toString());
-        }
     }
 
     @Override
@@ -47,12 +41,17 @@ public final class Core extends JavaPlugin {
         ModuleManager manager = new ModuleManager(instance);
         manager.start();
 
-        if (Bukkit.getOnlinePlayers().size() != 0){
-            for (Player player : Bukkit.getOnlinePlayers()){
-                MinetopiaPlayer mt = new MinetopiaPlayer(player);
+        for (Player p : Bukkit.getOnlinePlayers()){
+            MinetopiaPlayer mtPlayer = new MinetopiaPlayer(p);
 
-                for (Team team : getTeams().getTeams()){
-                    player.sendMessage(team.getName());
+            Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
+
+            for (ChatColor c : ChatColor.values()){
+                Team t = scoreboard.registerNewTeam(c.toString());
+                t.setPrefix("§" + c.toString());
+
+                if (c.toString() == mtPlayer.getNamecolor()){
+                    t.addEntry(p.getName());
                 }
             }
         }
@@ -77,5 +76,4 @@ public final class Core extends JavaPlugin {
         hikari.addDataSourceProperty("user", "system");
         hikari.addDataSourceProperty("password", "bMCEwmNcUYQEkwGZmJDDkLUfQAdskzPpZSxmJekXLKWjFZTaRMfqdRgrswCnhwFZSAeupJqR");
     }
-
 }

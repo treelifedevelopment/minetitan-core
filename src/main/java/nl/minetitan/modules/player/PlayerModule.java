@@ -14,6 +14,7 @@ import nl.minetitan.modules.player.listener.InvseeListener;
 import nl.minetitan.modules.player.listener.PlayerJoinListener;
 import nl.minetitan.modules.player.listener.PlayerLogoutListener;
 import nl.minetitan.modules.player.listener.PreLoginListener;
+import nl.minetitan.modules.player.tasks.PlayerUpdater;
 import org.bukkit.Bukkit;
 
 public class PlayerModule implements MinetopiaModule {
@@ -35,6 +36,10 @@ public class PlayerModule implements MinetopiaModule {
         Bukkit.getPluginManager().registerEvents(new PreLoginListener(), getCore());
         Bukkit.getPluginManager().registerEvents(new PlayerLogoutListener(), getCore());
         Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(), getCore());
+
+        PlayerUpdater updater = new PlayerUpdater();
+        System.out.println("Loading updater");
+        updater.start();
     }
 
     @Override

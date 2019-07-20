@@ -16,11 +16,6 @@ public class PlayerLogoutListener implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent e){
         Player p = e.getPlayer();
-
-        MinetopiaPlayer mt = new MinetopiaPlayer(p);
-        if (Core.getInstance().getTeams().getTeam(mt.getNaamkleur()).getEntries().contains(p.getName())){
-            Core.getInstance().getTeams().getTeam(mt.getNaamkleur()).removeEntry(mt.getNaamkleur());
-        }
     }
 
 }

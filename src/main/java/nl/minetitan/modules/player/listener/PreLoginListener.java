@@ -5,6 +5,7 @@ Package: nl.minetitan.modules.player.listener in de class PreLoginListener.
 */
 
 import nl.minetitan.modules.player.MinetopiaPlayer;
+import nl.minetitan.modules.player.MinetopiaPlayerData;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -17,8 +18,9 @@ public class PreLoginListener implements Listener {
     public void onLogin(PlayerLoginEvent e){
         Player p = (Player)e.getPlayer();
 
-        MinetopiaPlayer player = new MinetopiaPlayer(p);
-        player.createUser(false);
+
+        MinetopiaPlayerData data = new MinetopiaPlayerData(p);
+        data.createUser(false);
     }
 
 }
