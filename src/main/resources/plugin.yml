@@ -1,0 +1,7 @@
+name: Minetopia-Core
+version: ${project.version}
+main: nl.minetitan.Core
+api-version: 1.13
+commands:
+  mod:
+
