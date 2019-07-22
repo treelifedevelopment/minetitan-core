@@ -15,8 +15,10 @@ public class DatabaseModule implements MinetopiaModule {
 
         manager.createArchiveTable();
         manager.createBankingTable();
-        manager.createArchiveTable();
+        manager.createTimeInfoTable();
         manager.createUserTable();
+        manager.createPrefixTable();
+        manager.createInventoryTable();
     }
 
     @Override

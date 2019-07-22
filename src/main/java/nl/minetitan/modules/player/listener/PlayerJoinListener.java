@@ -24,6 +24,8 @@ public class PlayerJoinListener implements Listener {
 
         MinetopiaPlayer mtPlayer = new MinetopiaPlayer(p);
 
+        mtPlayer.loadInventory();
+
         ScoreboardUpdateTask.loadScoreboard(p);
     }
 

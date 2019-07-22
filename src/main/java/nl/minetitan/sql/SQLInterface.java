@@ -8,7 +8,7 @@ public interface SQLInterface {
 
     public void createUserTable();
     public void createBankingTable();
-    public void createTemporaryDataTable();
+    public void createTimeInfoTable();
     public void createArchiveTable();
 
 }

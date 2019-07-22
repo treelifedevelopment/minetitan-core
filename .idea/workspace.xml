@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b52ab184-6000-4454-982b-77ae2cadc276" name="Default Changelist" comment="commit 1">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_craftbukkit_1_12_2_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_12_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_12_2_R0_1_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_18.xml" afterDir="false" />
+    <list default="true" id="b52ab184-6000-4454-982b-77ae2cadc276" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_bringholm_nametagchanger_NameTagChanger_1_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_comphenix_executors_BukkitExecutors_1_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_comphenix_protocol_ProtocolLib_API_4_3_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minetopia-Core (MineTitan).iml" beforeDir="false" afterPath="$PROJECT_DIR$/Minetopia-Core (MineTitan).iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/handler/enums/MessageKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/handler/enums/MessageKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/ModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/database/DatabaseModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/database/DatabaseModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/PlayerModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/PlayerModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/ModCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/ModCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerJoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerJoinListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerLogoutListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerLogoutListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PreLoginListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PreLoginListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Minetopia-Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Minetopia-Core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/Core.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/Core.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/handler/enums/MessageKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/handler/enums/MessageKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/ModuleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/ModuleManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/database/DatabaseModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/database/DatabaseModule.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/MinetopiaPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/MinetopiaPlayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/PlayerModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/PlayerModule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/commands/ModCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/commands/ModCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/listener/PlayerJoinListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/listener/PlayerJoinListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/listener/PlayerLogoutListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/listener/PlayerLogoutListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/listener/PreLoginListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/modules/player/listener/PreLoginListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/sql/SQLInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/sql/SQLInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/minetitan/sql/SQLManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/minetitan/sql/SQLManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -41,11 +50,119 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/BankingModule.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayerData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="181">
+              <caret line="576" column="43" selection-start-line="576" selection-start-column="43" selection-end-line="576" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerJoinListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerLogoutListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/ScoreboardUpdateTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PreLoginListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/PlayerModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="490">
+              <caret line="44" column="67" selection-start-line="44" selection-start-column="67" selection-end-line="44" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/serialize/BukkitSerialization.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,6 +180,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>break;</find>
+      <find>BankingAccount</find>
     </findStrings>
     <replaceStrings>
       <replace>return true;</replace>
@@ -78,33 +196,54 @@
         <option value="$PROJECT_DIR$/src/main/java/net/jordan/vehicles/CrackShot.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/MinetopiaModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/Maiky1304.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/interfaces/MinetopiaCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/interfaces/CommandInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/handler/CommandHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/ModCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/InvseeListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/handler/enums/MessageKey.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/database/DatabaseModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/ModuleManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/PlayerModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/NameUpdateTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerLogoutListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PreLoginListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/util/FastMath.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/ActionbarDataTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/util/NMSUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/Core.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/enums/AccountType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/commands/BankingCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/player/BankingData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/player/BankingAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/PlayerUpdater.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/gui/BankingAccountTypeGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/listeners/BankAccountListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/BankingModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/gui/BankingAccountGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/LuckyShardAddTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/TimeInfoTask.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/TimeCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/AsyncChatListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/ModuleManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/prefix/PrefixModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/PrefixCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/prefix/gui/PrefixSelectionGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/PlayerModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/handler/enums/MessageKey.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PrefixGUIClick.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/handler/BalanceWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/listeners/BankListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/ModCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/gui/BankUseGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/handler/MinetopiaItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerJoinListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/InteractWithSDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/database/DatabaseModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/serialize/BukkitSerialization.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerLogoutListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayerData.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PreLoginListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/Core.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/ScoreboardUpdateTask.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/util/FastMath.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/ActionbarDataTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/PlayerUpdater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/util/NMSUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/BankingModule.java" />
       </list>
     </option>
   </component>
@@ -118,9 +257,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="538" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -128,6 +267,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Minetopia-Core (MineTitan)" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Minetopia-Core (MineTitan)" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="Minetopia-Core (MineTitan)" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Minetopia-Core (MineTitan)" type="616d4139:PackageViewModuleNode" />
+              <item name="nl.minetitan" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,6 +323,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="minetitan" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Minetopia-Core (MineTitan)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minetopia-Core (MineTitan)" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="minetitan" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -178,7 +342,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="minetitan" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="banking" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Minetopia-Core (MineTitan)" type="b2602c69:ProjectViewProjectNode" />
@@ -187,7 +351,48 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="minetitan" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Minetopia-Core (MineTitan)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minetopia-Core (MineTitan)" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="minetitan" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Minetopia-Core (MineTitan)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minetopia-Core (MineTitan)" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="minetitan" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Minetopia-Core (MineTitan)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minetopia-Core (MineTitan)" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="minetitan" type="462c0819:PsiDirectoryNode" />
+              <item name="serialize" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Minetopia-Core (MineTitan)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minetopia-Core (MineTitan)" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="minetitan" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Minetopia-Core (MineTitan)" type="b2602c69:ProjectViewProjectNode" />
@@ -195,22 +400,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Minetopia-Core (MineTitan)" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Minetopia-Core (MineTitan)" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Minetopia-Core (MineTitan)" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Minetopia-Core (MineTitan)" type="616d4139:PackageViewModuleNode" />
-              <item name="nl.minetitan" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -231,7 +420,7 @@
     <property name="LombokPluginIS_VAL_Enabled" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/CrackShot.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/NameTagChanger v1.1-SNAPSHOT.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15375" />
     <property name="project.structure.side.proportion" value="0.5805022" />
@@ -294,7 +483,11 @@
       <updated>1563612225019</updated>
       <workItem from="1563612227386" duration="1456000" />
       <workItem from="1563615768397" duration="17008000" />
-      <workItem from="1563641881344" duration="2202000" />
+      <workItem from="1563641881344" duration="8946000" />
+      <workItem from="1563703314789" duration="17148000" />
+      <workItem from="1563778443783" duration="4954000" />
+      <workItem from="1563784752126" duration="4469000" />
+      <workItem from="1563796714075" duration="7759000" />
     </task>
     <task id="LOCAL-00001" summary="commit 1">
       <created>1563627223913</created>
@@ -303,24 +496,32 @@
       <option name="project" value="LOCAL" />
       <updated>1563627223913</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changes on runnables &amp; nms">
+      <created>1563644145889</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1563644145889</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20666000" />
+    <option name="totallyTimeSpent" value="61740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20149253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2889126" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40520042" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.66630554" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,7 +530,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.37594798" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -339,14 +540,14 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18603411" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40520042" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4084507" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -367,76 +568,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 1" />
+    <MESSAGE value="changes on runnables &amp; nms" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes on runnables &amp; nms" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/jordan/vehicles/Tuple.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/jordan/vehicles/CrackShot.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/MinetopiaModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/handler/CommandHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/handler/enums/MessageKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/database/DatabaseModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/ModuleManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/ModCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -461,38 +600,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/NameUpdateTask.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PreLoginListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerLogoutListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/ScoreboardUpdateTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/InvseeListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -517,77 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayerData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/Core.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerJoinListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/PlayerModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/util/NMSUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -595,16 +631,6 @@
           <folding>
             <element signature="e#377#378#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/PlayerUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -619,10 +645,400 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/MinetopiaModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="618" column="48" selection-start-line="618" selection-start-column="48" selection-end-line="618" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/enums/AccountType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/commands/BankingCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="115" column="41" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/player/BankingData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/player/BankingAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/Core.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/BankingModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/LuckyShardAddTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/TimeInfoTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/PlayerUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="106" selection-start-line="16" selection-start-column="106" selection-end-line="16" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/TimeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding>
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/AsyncChatListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/ModuleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/prefix/PrefixModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="62" lean-forward="true" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/PrefixCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/prefix/gui/PrefixSelectionGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/listeners/BankAccountListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/gui/BankingAccountTypeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/commands/ModCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="4" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/handler/enums/MessageKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/listeners/BankListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2626">
+          <caret line="203" column="36" selection-start-line="203" selection-start-column="36" selection-end-line="203" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/gui/BankingAccountGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PrefixGUIClick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/handler/BalanceWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/banking/gui/BankUseGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/InteractWithSDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/database/DatabaseModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/handler/MinetopiaItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/serialize/BukkitSerialization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerJoinListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayerData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="576" column="43" selection-start-line="576" selection-start-column="43" selection-end-line="576" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/PlayerModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="44" column="67" selection-start-line="44" selection-start-column="67" selection-end-line="44" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PlayerLogoutListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/sql/SQLManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/tasks/ScoreboardUpdateTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/listener/PreLoginListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/minetitan/modules/player/MinetopiaPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -682,7 +1098,6 @@
             <option name="proportions">
               <list>
                 <option value="0.5805022" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

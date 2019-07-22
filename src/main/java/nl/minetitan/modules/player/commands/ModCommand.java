@@ -6,6 +6,7 @@ Package: nl.minetitan.modules.player.commands in de class ModCommand.
 
 import nl.minetitan.handler.enums.MessageKey;
 import nl.minetitan.interfaces.MinetopiaCommand;
+import nl.minetitan.modules.player.MinetopiaPlayerData;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -14,6 +15,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.List;
 
 public class ModCommand extends MinetopiaCommand {
 
@@ -35,9 +38,9 @@ public class ModCommand extends MinetopiaCommand {
                         sender.sendMessage(ChatColor.RED + "Vul een spelernaam in!");
                         sender.sendMessage(ChatColor.RED + "Voorbeeld: /mod invsee Maiky1304");
                         return true;
-                    case "setprefix":
+                    case "addprefix":
                         sender.sendMessage(ChatColor.RED + "Vul een spelernaam & prefix in!");
-                        sender.sendMessage(ChatColor.RED + "Voorbeeld: /mod setprefix Maiky1304 Burger");
+                        sender.sendMessage(ChatColor.RED + "Voorbeeld: /mod addprefix Maiky1304 Burger");
                         return true;
                     case "setlevel":
                         sender.sendMessage(ChatColor.RED + "Vul een spelernaam & level in!");
@@ -79,7 +82,43 @@ public class ModCommand extends MinetopiaCommand {
                         p.openInventory(invseeInventory);
 
                         MessageKey.send(p, MessageKey.MOD_OPENED_INVSEE_OPENED, offlinePlayer.getName());
-                        break;
+                        return true;
+                }
+
+                sender.sendMessage(ChatColor.RED + "Je hebt geen geldig sub-commando gebruikt.");
+                return true;
+            } else if (args.length >= 3){
+                switch (args[0].toLowerCase()){
+                    case "addprefix" :
+                        String player = args[1];
+                        String prefix = "";
+                        if (args.length == 3){
+                            prefix = args[2];
+                        }else if (args.length > 3){
+                            for (int i = 2; i != args.length; i++){
+                                prefix += args[i] + " ";
+                            }
+
+                            prefix = prefix.substring(0, prefix.length()-1);
+                        }
+
+                        MinetopiaPlayerData data = new MinetopiaPlayerData(Bukkit.getOfflinePlayer(player).getUniqueId());
+
+                        if (!data.existsInPrefixDatabase()){
+                            MessageKey.send(p, MessageKey.PLAYER_DOESNT_EXISTS);
+                            return true;
+                        }
+
+                        List<String> currentPrefixes = data.getPrefixes();
+
+                        if (currentPrefixes.contains(prefix)){
+                            MessageKey.send(p, MessageKey.PLAYER_ALREADY_HAS_PREFIX_PROVIDED);
+                            return true;
+                        }
+
+                        data.setPrefixes(data.getPrefixesRaw() + ";" + prefix);
+                        MessageKey.send(p, MessageKey.PLAYER_ADDED_PREFIX_TO_PLAYER, prefix, player);
+                        return true;
                 }
             }
         }

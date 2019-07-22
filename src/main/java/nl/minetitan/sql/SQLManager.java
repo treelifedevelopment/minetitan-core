@@ -13,6 +13,62 @@ import java.sql.SQLException;
 
 public class SQLManager implements SQLInterface {
 
+    public void createInventoryTable() {
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "CREATE TABLE IF NOT EXISTS minetopia_inventories(UUID varchar(88), BASE64 LONGTEXT)";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.execute();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void createPrefixTable() {
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "CREATE TABLE IF NOT EXISTS minetopia_userprefixes(UUID varchar(88), PREFIXES varchar(255), SCOPE varchar(255))";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.execute();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
     @Override
     public void createArchiveTable() {
         Connection connection = null;
@@ -47,7 +103,11 @@ public class SQLManager implements SQLInterface {
         Connection connection = null;
         PreparedStatement statement = null;
 
-        String sql = "CREATE TABLE IF NOT EXISTS minetopia_banking(UUID varchar(48), USERNAME varchar(48), BALANCE double(255,2))";
+        String sql = "CREATE TABLE IF NOT EXISTS minetopia_banking(ACCOUNTID int(255)," +
+                " ACCOUNTHOLDER_UUID varchar(48)," +
+                " ACCOUNT_TYPE varchar(100)," +
+                " IDENTIFIER varchar(100)," +
+                " BALANCE double(255,2))";
 
         try {
             connection = Core.getInstance().getHikari().getConnection();
@@ -72,8 +132,32 @@ public class SQLManager implements SQLInterface {
     }
 
     @Override
-    public void createTemporaryDataTable() {
+    public void createTimeInfoTable() {
+        Connection connection = null;
+        PreparedStatement statement = null;
 
+        String sql = "CREATE TABLE IF NOT EXISTS minetopia_timeonline(UUID varchar(48), DAYS int(255), HOURS int(255), MINUTES int(255), SECONDS int(255))";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.execute();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -81,7 +165,7 @@ public class SQLManager implements SQLInterface {
         Connection connection = null;
         PreparedStatement statement = null;
 
-        String sql = "CREATE TABLE IF NOT EXISTS minetopia_users(UUID varchar(48), USERNAME varchar(48), LEVEL int(255), PREFIX varchar(255), " +
+        String sql = "CREATE TABLE IF NOT EXISTS minetopia_users(UUID varchar(48), LEVEL int(255), PREFIX varchar(255), " +
                 "FITHEID int(255)," +
                 "NAAMKLEUR varchar(255)," +
                 "LEVELKLEUREN varchar(255)," +
