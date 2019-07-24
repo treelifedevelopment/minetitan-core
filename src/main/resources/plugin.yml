@@ -4,6 +4,12 @@ main: nl.minetitan.Core
 api-version: 1.13
 commands:
   mod:
+    description: 'Alle moderation tools van MineTopia'
   banking:
+    description: 'Admin commando voor bankieren'
   time:
+    description: 'Zie je online tijd'
   prefix:
+    description: 'Wijzig jouw prefix!'
+  chatkleur:
+    description: 'Wijzig jouw chatkleur!'

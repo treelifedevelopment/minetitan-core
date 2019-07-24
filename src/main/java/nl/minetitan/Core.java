@@ -7,6 +7,7 @@ import nl.minetitan.handler.CommandHandler;
 import nl.minetitan.interfaces.MinetopiaCommand;
 import nl.minetitan.modules.ModuleManager;
 import nl.minetitan.modules.player.MinetopiaPlayer;
+import nl.minetitan.modules.player.tasks.ScoreboardUpdateTask;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -38,21 +39,15 @@ public final class Core extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        getConfig().options().copyDefaults(true);
+        saveConfig();
+
         ModuleManager manager = new ModuleManager(instance);
         manager.start();
 
-        for (Player p : Bukkit.getOnlinePlayers()){
-            MinetopiaPlayer mtPlayer = new MinetopiaPlayer(p);
-
-            Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
-
-            for (ChatColor c : ChatColor.values()){
-                Team t = scoreboard.registerNewTeam(c.toString());
-                t.setPrefix("§" + c.toString());
-
-                if (c.toString() == mtPlayer.getNamecolor()){
-                    t.addEntry(p.getName());
-                }
+        if (Bukkit.getOnlinePlayers().size() > 0) {
+            for (Player p : Bukkit.getOnlinePlayers()) {
+                ScoreboardUpdateTask.loadScoreboard(p);
             }
         }
     }
@@ -70,7 +65,7 @@ public final class Core extends JavaPlugin {
         //Setting Hikari properties
         hikari.setMaximumPoolSize(10);
         hikari.setDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlDataSource");
-        hikari.addDataSourceProperty("serverName", "62.210.119.232");
+        hikari.addDataSourceProperty("serverName", "173.249.50.167");
         hikari.addDataSourceProperty("port", "3306");
         hikari.addDataSourceProperty("databaseName", "minetopia-dev");
         hikari.addDataSourceProperty("user", "system");

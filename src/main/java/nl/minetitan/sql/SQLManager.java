@@ -13,6 +13,34 @@ import java.sql.SQLException;
 
 public class SQLManager implements SQLInterface {
 
+    public void createFitnessTable() {
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "CREATE TABLE IF NOT EXISTS minetopia_fitness(UUID varchar(88), POINTS int(255), HAS_RESET varchar(48))";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.execute();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
     public void createInventoryTable() {
         Connection connection = null;
         PreparedStatement statement = null;
@@ -160,16 +188,44 @@ public class SQLManager implements SQLInterface {
         }
     }
 
+    public void createChatkleurTable() {
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "CREATE TABLE IF NOT EXISTS minetopia_chatkleur(UUID varchar(90), KLEUREN LONGTEXT, SCOPE varchar(32))";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.execute();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
     @Override
     public void createUserTable() {
         Connection connection = null;
         PreparedStatement statement = null;
 
-        String sql = "CREATE TABLE IF NOT EXISTS minetopia_users(UUID varchar(48), LEVEL int(255), PREFIX varchar(255), " +
+        String sql = "CREATE TABLE IF NOT EXISTS minetopia_users(UUID varchar(48), LEVEL int(255)," +
                 "FITHEID int(255)," +
                 "NAAMKLEUR varchar(255)," +
                 "LEVELKLEUREN varchar(255)," +
-                "CHATKLEUREN varchar(255))";
+                "LUCKYSHARDS double(255,4))";
 
         try {
             connection = Core.getInstance().getHikari().getConnection();

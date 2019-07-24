@@ -25,7 +25,7 @@ public class AsyncChatListener implements Listener {
                         , data.getPrefixScope()
                         , data.getNaamkleur(),
                         e.getPlayer().getName(),
-                        "&" + data.getChatcolors().get(0),
+                        "&" + data.getChatkleurScope(),
                         e.getMessage()
                 )));
     }

@@ -9,6 +9,7 @@ import lombok.Setter;
 import nl.minetitan.Core;
 import nl.minetitan.modules.banking.BankingModule;
 import nl.minetitan.modules.database.DatabaseModule;
+import nl.minetitan.modules.fitness.FitnessModule;
 import nl.minetitan.modules.player.PlayerModule;
 import nl.minetitan.modules.prefix.PrefixModule;
 
@@ -28,12 +29,14 @@ public class ModuleManager implements MinetopiaModule{
         DatabaseModule module1 = new DatabaseModule();
         BankingModule module2 = new BankingModule();
         PrefixModule module3 = new PrefixModule();
+        FitnessModule module4 = new FitnessModule();
 
         // Starters
         module.start();
         module1.start();
         module2.start();
         module3.start();
+        module4.start();
     }
 
     @Override
@@ -43,12 +46,14 @@ public class ModuleManager implements MinetopiaModule{
         DatabaseModule module1 = new DatabaseModule();
         BankingModule module2 = new BankingModule();
         PrefixModule module3 = new PrefixModule();
+        FitnessModule module4 = new FitnessModule();
 
         // Stoppers
         module.stop();
         module1.stop();
         module2.stop();
         module3.stop();
+        module4.stop();
     }
 
 }

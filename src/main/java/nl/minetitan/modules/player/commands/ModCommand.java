@@ -4,9 +4,11 @@ Door: Maiky
 Package: nl.minetitan.modules.player.commands in de class ModCommand.
 */
 
+import nl.minetitan.handler.enums.Chatkleur;
 import nl.minetitan.handler.enums.MessageKey;
 import nl.minetitan.interfaces.MinetopiaCommand;
 import nl.minetitan.modules.player.MinetopiaPlayerData;
+import nl.minetitan.modules.player.tasks.ScoreboardUpdateTask;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -16,6 +18,7 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ModCommand extends MinetopiaCommand {
@@ -83,6 +86,30 @@ public class ModCommand extends MinetopiaCommand {
 
                         MessageKey.send(p, MessageKey.MOD_OPENED_INVSEE_OPENED, offlinePlayer.getName());
                         return true;
+                    case "getprefixes" :
+                        player = args[1];
+                        offlinePlayer = Bukkit.getOfflinePlayer(player);
+
+                        MinetopiaPlayerData data = new MinetopiaPlayerData(Bukkit.getOfflinePlayer(player).getUniqueId());
+
+                        if (!data.existsInDatabase()){
+                            MessageKey.send(p, MessageKey.PLAYER_DOESNT_EXISTS);
+                            return true;
+                        }
+
+                        if (!data.existsInPrefixDatabase()){
+                            MessageKey.send(p, MessageKey.PLAYER_DOESNT_EXISTS);
+                            return true;
+                        }
+
+                        List<String> prefixList = data.getPrefixes();
+
+                        MessageKey.send(p, MessageKey.PERSONAL_HEADER_MESSAGE, "Prefixen", player);
+
+                        for (String prefix : prefixList){
+                            MessageKey.send(p, MessageKey.COUNT_UP_MESSAGE, prefix);
+                        }
+                        return true;
                 }
 
                 sender.sendMessage(ChatColor.RED + "Je hebt geen geldig sub-commando gebruikt.");
@@ -117,8 +144,110 @@ public class ModCommand extends MinetopiaCommand {
                         }
 
                         data.setPrefixes(data.getPrefixesRaw() + ";" + prefix);
-                        MessageKey.send(p, MessageKey.PLAYER_ADDED_PREFIX_TO_PLAYER, prefix, player);
+                        MessageKey.send(p, MessageKey.PLAYER_ADDED_PREFIX_OF_PLAYER, prefix, player);
                         return true;
+                    case "setlevel" :
+                        player = args[1];
+                        String level = args[2];
+
+                        int levelAsInt = 0;
+
+                        try {
+                            levelAsInt= Integer.parseInt(level);
+                        } catch (NumberFormatException e){
+                            MessageKey.send(p, MessageKey.NUMBER_FORMAT_ERROR);
+                            return true;
+                        }
+
+                        data = new MinetopiaPlayerData(Bukkit.getOfflinePlayer(player).getUniqueId());
+
+                        if (!data.existsInDatabase()){
+                            MessageKey.send(p, MessageKey.PLAYER_DOESNT_EXISTS);
+                            return true;
+                        }
+
+                        data.setLevel(levelAsInt);
+
+                        MessageKey.send(p, MessageKey.PLAYER_CHANGED_LEVEL_OF_PLAYER, player, level);
+
+                        if (Bukkit.getOfflinePlayer(player).isOnline()){
+                            Player playerWhoGotLevelChange = Bukkit.getPlayer(player);
+                            ScoreboardUpdateTask.loadScoreboard(playerWhoGotLevelChange);
+                        }
+                        return true;
+                    case "setnaamkleur" :
+                        player = args[1];
+                        String kleur = args[2];
+
+                        data = new MinetopiaPlayerData(Bukkit.getOfflinePlayer(player).getUniqueId());
+
+                        if (!data.existsInDatabase()){
+                            MessageKey.send(p, MessageKey.PLAYER_DOESNT_EXISTS);
+                            return true;
+                        }
+
+                        data.setNaamkleur(kleur);
+
+                        if (kleur.endsWith("&l")) kleur = kleur.replace("&l", " (Dikgedrukt)");
+
+                        MessageKey.send(p, MessageKey.PLAYER_CHANGED_NAMECOLOR_OF_PLAYER, player, kleur);
+
+                        if (Bukkit.getOfflinePlayer(player).isOnline()){
+                            Player playerWhoGotLevelChange = Bukkit.getPlayer(player);
+                            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "ne player " + playerWhoGotLevelChange.getName() + " prefix &" + data.getNaamkleur());
+                        }
+                        return true;
+                    case "addchatkleur" :
+                        player = args[1];
+                        kleur = args[2];
+
+                        if (kleur.equalsIgnoreCase("*")){
+                            data = new MinetopiaPlayerData(Bukkit.getOfflinePlayer(player).getUniqueId());
+
+                            if (!data.existsInDatabase()){
+                                MessageKey.send(p, MessageKey.PLAYER_DOESNT_EXISTS);
+                                return true;
+                            }
+
+                            data.setChatkleuren("");
+
+                            for (Chatkleur kleur2 : Chatkleur.values()){
+                                data.addChatkleur(kleur2.getS().replace("&", ""));
+                            }
+
+                            MessageKey.send(p, MessageKey.PLAYER_ADDED_CHATCOLOR_TO_PLAYER, player, kleur);
+                            return true;
+                        }else {
+
+                            data = new MinetopiaPlayerData(Bukkit.getOfflinePlayer(player).getUniqueId());
+
+                            if (!data.existsInDatabase()) {
+                                MessageKey.send(p, MessageKey.PLAYER_DOESNT_EXISTS);
+                                return true;
+                            }
+
+                            if (data.getChatcolors().contains(kleur)) {
+                                MessageKey.send(p, MessageKey.PLAYER_ALREADY_HAS_CHATCOLOR);
+                                return true;
+                            }
+
+                            List<String> colors = new ArrayList<String>();
+
+                            for (ChatColor c : ChatColor.values()) {
+                                colors.add(String.valueOf(c.getChar()));
+                            }
+
+                            if (!colors.contains(kleur)) {
+                                MessageKey.send(p, MessageKey.COLOR_DOESNT_EXISTS);
+                                return true;
+                            }
+
+                            data.addChatkleur(kleur);
+
+                            MessageKey.send(p, MessageKey.PLAYER_ADDED_CHATCOLOR_TO_PLAYER, player, kleur);
+                            return true;
+                        }
+
                 }
             }
         }

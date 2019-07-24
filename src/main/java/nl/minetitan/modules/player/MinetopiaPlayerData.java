@@ -172,6 +172,104 @@ public class MinetopiaPlayerData {
         return "Zwerver";
     }
 
+    public int getFitheidPunten(){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "SELECT * FROM minetopia_fitness WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, uuid.toString());
+
+            ResultSet rs = statement.executeQuery();
+
+            if (rs.next()){
+                return rs.getInt("POINTS");
+            }
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+        return 0;
+    }
+
+    public void setFitness(int input){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "UPDATE minetopia_users SET FITHEID=? WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setInt(1, input);
+            statement.setString(2, uuid.toString());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void setFitheidPunten(int input){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "UPDATE minetopia_fitness SET POINTS=? WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setInt(1, input);
+            statement.setString(2, uuid.toString());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
     public List<String> getPrefixes(){
         Connection connection = null;
         PreparedStatement statement = null;
@@ -220,7 +318,38 @@ public class MinetopiaPlayerData {
         return Arrays.asList("Zwerver");
     }
 
-    public List<String> getChatcolors(){
+    public void setLuckyshards(double amount) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "UPDATE minetopia_users SET LUCKYSHARDS=? WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setDouble(1, amount);
+            statement.setString(2, uuid.toString());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public double getLuckyshards(){
         Connection connection = null;
         PreparedStatement statement = null;
 
@@ -234,8 +363,78 @@ public class MinetopiaPlayerData {
 
             ResultSet set = statement.executeQuery();
 
+            if (set.next()) {
+                return set.getDouble("LUCKYSHARDS");
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+        return 0.0;
+    }
+
+    public String getChatcolorsRaw(){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "SELECT * FROM minetopia_chatkleur WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, uuid.toString());
+
+            ResultSet set = statement.executeQuery();
+
             if (set.next()){
-                String chatkleuren = set.getString("CHATKLEUREN");
+                return set.getString("KLEUREN");
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+        return "7";
+    }
+
+    public List<String> getChatcolors(){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "SELECT * FROM minetopia_chatkleur WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, uuid.toString());
+
+            ResultSet set = statement.executeQuery();
+
+            if (set.next()){
+                String chatkleuren = set.getString("KLEUREN");
                 if (chatkleuren.contains(";")){
                     String[] colors = chatkleuren.split(";");
 
@@ -467,6 +666,203 @@ public class MinetopiaPlayerData {
         return 1;
     }
 
+    public String getChatkleurScope(){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "SELECT * FROM minetopia_chatkleur WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, uuid.toString());
+
+            ResultSet set = statement.executeQuery();
+
+            if (set.next()){
+                return set.getString("SCOPE");
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+        return "7";
+    }
+
+    public void setChatkleuren(String input){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "UPDATE minetopia_chatkleur SET KLEUREN=? WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, input);
+            statement.setString(2, uuid.toString());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void addChatkleur(String kleur){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "UPDATE minetopia_chatkleur SET KLEUREN=? WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            String chatkleuren = "";
+            for (String color : getChatcolors()){
+                chatkleuren += color + ";";
+            }
+
+            chatkleuren += kleur;
+
+            statement.setString(1, chatkleuren);
+            statement.setString(2, uuid.toString());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void setChatkleurScope(String kleur){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "UPDATE minetopia_chatkleur SET SCOPE=? WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, kleur);
+            statement.setString(2, uuid.toString());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void setNaamkleur(String kleur){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "UPDATE minetopia_users SET NAAMKLEUR=? WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, kleur);
+            statement.setString(2, uuid.toString());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void setLevel(int level){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "UPDATE minetopia_users SET LEVEL=? WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setInt(1, level);
+            statement.setString(2, uuid.toString());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
     public int getMinutesOnline(){
         Connection connection = null;
         PreparedStatement statement = null;
@@ -586,6 +982,7 @@ public class MinetopiaPlayerData {
             statement.setString(2, uuid.toString());
 
             statement.executeUpdate();
+            System.out.println("Updated inventory of " + uuid.toString());
         } catch (SQLException e){
             e.printStackTrace();
         } finally {
@@ -682,7 +1079,7 @@ public class MinetopiaPlayerData {
                 Connection connection = null;
                 PreparedStatement statement = null;
 
-                String sql = "INSERT INTO minetopia_users VALUES(?,?,?,?,?,?,?)";
+                String sql = "INSERT INTO minetopia_users VALUES(?,?,?,?,?,?)";
 
                 try {
                     connection = Core.getInstance().getHikari().getConnection();
@@ -690,11 +1087,10 @@ public class MinetopiaPlayerData {
 
                     statement.setString(1, uuid.toString());
                     statement.setInt(2, 1);
-                    statement.setString(3, "Zwerver");
-                    statement.setInt(4, 20);
-                    statement.setString(5, "7");
-                    statement.setString(6, "b");
-                    statement.setString(7, "7");
+                    statement.setInt(3, 20);
+                    statement.setString(4, "7");
+                    statement.setString(5, "b");
+                    statement.setDouble(6, 0.0000);
 
                     statement.execute();
                 } catch (SQLException e){
@@ -816,22 +1212,89 @@ public class MinetopiaPlayerData {
 
             if(!existsInInventoryDatabase()){
                 Connection connection = null;
+                    PreparedStatement statement = null;
+
+                    String sql = "INSERT INTO minetopia_inventories VALUES(?,?)";
+
+                    try {
+                        connection = Core.getInstance().getHikari().getConnection();
+                        statement = connection.prepareStatement(sql);
+
+                        statement.setString(1, uuid.toString());
+
+                        Inventory inventory = Bukkit.createInventory(null, 4*9, "Temp");
+                        for (int i = 1; i < 17; i++){
+                            inventory.addItem(new MinetopiaItem(Material.APPLE).createItem());
+                        }
+
+                        statement.setString(2, BukkitSerialization.toBase64(inventory));
+
+                        statement.execute();
+                    } catch (SQLException e){
+                        e.printStackTrace();
+                    } finally {
+                        try {
+                            if (connection != null){
+                                connection.close();
+                            }
+
+                            if (statement != null){
+                                statement.close();
+                            }
+                        } catch (SQLException e){
+                            e.printStackTrace();
+                        }
+                }
+
+            }
+
+            if (!existsInFitnessDatabase()){
+                Connection connection = null;
                 PreparedStatement statement = null;
 
-                String sql = "INSERT INTO minetopia_inventories VALUES(?,?)";
+                String sql = "INSERT INTO minetopia_fitness VALUES(?,?,?)";
 
                 try {
                     connection = Core.getInstance().getHikari().getConnection();
                     statement = connection.prepareStatement(sql);
 
                     statement.setString(1, uuid.toString());
+                    statement.setInt(2, 0);
+                    statement.setString(3, "false");
 
-                    Inventory inventory = Bukkit.createInventory(null, 4*9, "Temp");
-                    for (int i = 1; i < 17; i++){
-                        inventory.addItem(new MinetopiaItem(Material.APPLE).createItem());
+                    statement.executeUpdate();
+
+                    statement.execute();
+                } catch (SQLException e){
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        if (connection != null){
+                            connection.close();
+                        }
+
+                        if (statement != null){
+                            statement.close();
+                        }
+                    } catch (SQLException e){
+                        e.printStackTrace();
                     }
+                }
+            }
 
-                    statement.setString(2, BukkitSerialization.toBase64(inventory));
+            if(!existsInChatkleurDB()){
+                Connection connection = null;
+                PreparedStatement statement = null;
+
+                String sql = "INSERT INTO minetopia_chatkleur VALUES(?,?,?)";
+
+                try {
+                    connection = Core.getInstance().getHikari().getConnection();
+                    statement = connection.prepareStatement(sql);
+
+                    statement.setString(1, uuid.toString());
+                    statement.setString(2, "7");
+                    statement.setString(3, "7");
 
                     statement.execute();
                 } catch (SQLException e){
@@ -850,7 +1313,81 @@ public class MinetopiaPlayerData {
                     }
                 }
 
+            }
+        }
+    }
 
+    public boolean existsInChatkleurDB(){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "SELECT * FROM minetopia_chatkleur WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, uuid.toString());
+
+            ResultSet set = statement.executeQuery();
+
+            if (set.next()){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    public boolean existsInFitnessDatabase(){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        String sql = "SELECT * FROM minetopia_fitness WHERE UUID=?";
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement(sql);
+
+            statement.setString(1, uuid.toString());
+
+            ResultSet set = statement.executeQuery();
+
+            if (set.next()){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
             }
         }
     }

@@ -57,15 +57,7 @@ public class BankListener implements Listener {
 
             if (i >= 45 && i <= 53){
                 //TODO: Withdraw 1 of the items
-
-                int space = 0;
-                for (ItemStack content : e.getWhoClicked().getInventory().getContents()){
-                    if (content == null){
-                        space++;
-                    }
-                }
-
-                if (space == 0){
+                if (e.getWhoClicked().getInventory().firstEmpty() == -1){
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.NOT_ENOUGH_INVENTORY_SPACE);
                     e.setCancelled(true);
                     return;
@@ -153,19 +145,11 @@ public class BankListener implements Listener {
             if (i >= 0 && i <= 35){
                 //TODO: Take the stack
 
-                int space = 0;
-                for (ItemStack content : e.getWhoClicked().getInventory().getContents()){
-                    if (content == null){
-                        space++;
-                    }
-                }
-
-                if (space == 0){
+                if (e.getWhoClicked().getInventory().firstEmpty() == -1){
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.NOT_ENOUGH_INVENTORY_SPACE);
                     e.setCancelled(true);
                     return;
                 }
-
                 if (e.getCurrentItem().getType() == Material.GHAST_TEAR){
                     account.take(500.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.WITHRAW_MONEY, new BalanceWrapper().convert(500 * e.getCurrentItem().getAmount()));
@@ -204,39 +188,43 @@ public class BankListener implements Listener {
             if (i >= 54 && i <= 89){
                 //TODO: Deposit the stack
 
-                if (e.getCurrentItem().getType() == Material.GHAST_TEAR){
+                boolean valid = false;
+
+                if (e.getCurrentItem().getType() == Material.GHAST_TEAR){ valid = true;
                     account.deposit(500.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(500 * e.getCurrentItem().getAmount()));
-                }else if (e.getCurrentItem().getType() == Material.DIAMOND){
+                }else if (e.getCurrentItem().getType() == Material.DIAMOND){valid = true;
                     account.deposit(200.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(200 * e.getCurrentItem().getAmount()));
-                }else if (e.getCurrentItem().getType() == Material.REDSTONE){
+                }else if (e.getCurrentItem().getType() == Material.REDSTONE){valid = true;
                     account.deposit(100.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(100 * e.getCurrentItem().getAmount()));
-                }else if (e.getCurrentItem().getType() == Material.EMERALD){
+                }else if (e.getCurrentItem().getType() == Material.EMERALD){valid = true;
                     account.deposit(50.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(50 * e.getCurrentItem().getAmount()));
-                }else if (e.getCurrentItem().getType() == Material.COAL){
+                }else if (e.getCurrentItem().getType() == Material.COAL){valid = true;
                     account.deposit(20.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(20 * e.getCurrentItem().getAmount()));
-                }else if (e.getCurrentItem().getType() == Material.IRON_INGOT){
+                }else if (e.getCurrentItem().getType() == Material.IRON_INGOT){valid = true;
                     account.deposit(10.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(10 * e.getCurrentItem().getAmount()));
-                }else if (e.getCurrentItem().getType() == Material.QUARTZ){
+                }else if (e.getCurrentItem().getType() == Material.QUARTZ){valid = true;
                     account.deposit(5.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(5 * e.getCurrentItem().getAmount()));
-                }else if (e.getCurrentItem().getType() == Material.GOLD_INGOT){
+                }else if (e.getCurrentItem().getType() == Material.GOLD_INGOT){valid = true;
                     account.deposit(1.00 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(1 * e.getCurrentItem().getAmount()));
-                }else if (e.getCurrentItem().getType() == Material.GOLD_NUGGET){
+                }else if (e.getCurrentItem().getType() == Material.GOLD_NUGGET){valid = true;
                     account.deposit(0.10 * e.getCurrentItem().getAmount());
                     MessageKey.send((Player)e.getWhoClicked(), MessageKey.DEPOSIT_MONEY, new BalanceWrapper().convert(0.10 * e.getCurrentItem().getAmount()) + "0");
                 }else{
                     e.setCancelled(true);
                 }
 
-                e.getWhoClicked().getInventory().clear(e.getSlot());
-                new BankUseGUI().openBank((Player) e.getWhoClicked(), account.getID());
+                if (valid){
+                    e.getWhoClicked().getInventory().clear(e.getSlot());
+                    new BankUseGUI().openBank((Player) e.getWhoClicked(), account.getID());
+                }
             }
         }
     }

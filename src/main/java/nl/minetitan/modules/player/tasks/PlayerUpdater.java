@@ -15,6 +15,7 @@ public class PlayerUpdater implements MinetopiaModule {
         Bukkit.getScheduler().runTaskTimer(Core.getInstance(), new ScoreboardUpdateTask(), 0L, 20L*30L);
         Bukkit.getScheduler().runTaskTimerAsynchronously(Core.getInstance(), new ActionbarDataTask(), 0L, 20L);
         Bukkit.getScheduler().runTaskTimerAsynchronously(Core.getInstance(), new TimeInfoTask(), 0L, 20L);
+        //Bukkit.getScheduler().runTaskTimerAsynchronously(Core.getInstance(), new PlayerInventorySaver(), 0L, 20L*10L);
     }
 
     @Override

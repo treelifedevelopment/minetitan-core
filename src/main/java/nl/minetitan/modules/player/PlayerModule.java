@@ -9,6 +9,7 @@ import lombok.Setter;
 import nl.minetitan.Core;
 import nl.minetitan.handler.CommandHandler;
 import nl.minetitan.modules.MinetopiaModule;
+import nl.minetitan.modules.player.commands.ChatkleurCommand;
 import nl.minetitan.modules.player.commands.ModCommand;
 import nl.minetitan.modules.player.commands.PrefixCommand;
 import nl.minetitan.modules.player.commands.TimeCommand;
@@ -39,6 +40,7 @@ public class PlayerModule implements MinetopiaModule {
         handler.register("mod", new ModCommand());
         handler.register("time", new TimeCommand());
         handler.register("prefix", new PrefixCommand());
+        handler.register("chatkleur", new ChatkleurCommand());
 
         Bukkit.getPluginManager().registerEvents(new InvseeListener(), getCore());
         Bukkit.getPluginManager().registerEvents(new PreLoginListener(), getCore());
@@ -47,6 +49,8 @@ public class PlayerModule implements MinetopiaModule {
         Bukkit.getPluginManager().registerEvents(new InteractWithSDB(), getCore());
         Bukkit.getPluginManager().registerEvents(new AsyncChatListener(), getCore());
         Bukkit.getPluginManager().registerEvents(new PrefixGUIClick(), getCore());
+        Bukkit.getPluginManager().registerEvents(new ChatkleurGUI_Listener(), getCore());
+        Bukkit.getPluginManager().registerEvents(new BlockBecauseLoading(), getCore());
 
         PlayerUpdater updater = new PlayerUpdater();
         System.out.println("Loading updater");
