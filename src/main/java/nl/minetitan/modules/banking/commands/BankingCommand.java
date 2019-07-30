@@ -7,17 +7,22 @@ Package: nl.minetitan.modules.banking.commands in de class BankingCommand.
 import nl.minetitan.handler.enums.MessageKey;
 import nl.minetitan.interfaces.MinetopiaCommand;
 import nl.minetitan.modules.banking.enums.AccountType;
+import nl.minetitan.modules.banking.gui.BankUseGUI;
 import nl.minetitan.modules.banking.player.BankingAccount;
 import nl.minetitan.modules.banking.player.BankingData;
 import nl.minetitan.modules.player.MinetopiaPlayer;
 import nl.minetitan.modules.player.MinetopiaPlayerData;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -43,13 +48,39 @@ public class BankingCommand extends MinetopiaCommand {
                     MessageKey.send(p, MessageKey.USE_FOLLOWING_COMMAND_BANKING, "banking", "createaccount", "<personal/buisness/savings>", "<user>", "<identifier>");
                     return true;
                 case "openbank" :
-                    MessageKey.send(p, MessageKey.USE_FOLLOWING_COMMAND_BANKING, "banking", "openbank", "<id>");
+                    MessageKey.send(p, MessageKey.USE_FOLLOWING_COMMAND_BANKING_2, "banking", "openbank", "<id>");
+                    return true;
+                case "getpinpas" :
+                    MessageKey.send(p, MessageKey.USE_FOLLOWING_COMMAND_BANKING_2, "banking", "getpinpas", "<id>");
                     return true;
             }
 
             MessageKey.send(p, MessageKey.WRONG_SUB_COMMAND);
             return true;
         }else if (args.length == 2 || args.length == 3){
+            if (args[0].equalsIgnoreCase("getpinpas")){
+                String id = args[1];
+                int accountID;
+
+                try {
+                    accountID = Integer.parseInt(id);
+                } catch (NumberFormatException e){
+                    MessageKey.send(p, MessageKey.INVALID_NUMBER, id);
+                    accountID = -1;
+                    return true;
+                }
+
+                ItemStack pinpas = new ItemStack(Material.INK_SACK, 1, (short)10);
+                ItemMeta meta = pinpas.getItemMeta();
+                meta.setLore(Arrays.asList("Rekening ID: " + accountID));
+                pinpas.setItemMeta(meta);
+
+                p.getInventory().addItem(pinpas);
+
+                MessageKey.send(p, MessageKey.ADMIN_CREATED_PINPAS, id);
+                return true;
+            }
+
             if (args[0].equalsIgnoreCase("openbank")){
                 String id = args[1];
                 int idParsed;
@@ -64,21 +95,13 @@ public class BankingCommand extends MinetopiaCommand {
 
                 BankingData data = new BankingData();
 
-                data.getAccountsIDs();
-
-                List<String> accountList = new ArrayList<>();
-                for (Map<String,Object> map : data.getAccountsIDs()) {
-                    for (Object object : map.keySet()) {
-                        accountList.add(String.valueOf(object));
-                    }
-                }
-
-                if (!accountList.contains(id)){
+                if (!data.doesAccountExist(idParsed)){
                     MessageKey.send(p, MessageKey.INVALID_BANK_ID);
                     return true;
                 }
 
-                //TODO:
+                new BankUseGUI().openBank(p, idParsed);
+                MessageKey.send(p, MessageKey.PLAYER_OPENED_BANK_ADMIN, id);
                 return true;
             }else if (args[0].equalsIgnoreCase("createaccount")){
                 MessageKey.send(p, MessageKey.USE_FOLLOWING_COMMAND_BANKING, "banking", "createaccount", "<personal/buisness/savings>", "<user>", "<identifier>");

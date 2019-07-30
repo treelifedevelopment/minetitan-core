@@ -1,6 +1,7 @@
 nl\minetitan\modules\player\listener\ChatkleurGUI_Listener.class
 nl\minetitan\interfaces\CommandInterface.class
 nl\minetitan\modules\banking\player\BankingData.class
+nl\minetitan\modules\plots\WorldGuardModule.class
 nl\minetitan\modules\player\tasks\ActionbarDataTask.class
 nl\minetitan\modules\banking\listeners\BankListener.class
 nl\minetitan\modules\player\MinetopiaPlayer.class
@@ -16,6 +17,7 @@ nl\minetitan\modules\banking\BankingModule.class
 nl\minetitan\Core.class
 nl\minetitan\sql\SQLInterface.class
 nl\minetitan\handler\MinetopiaItem.class
+nl\minetitan\modules\banking\listeners\PinpasListener.class
 nl\minetitan\interfaces\MinetopiaCommand.class
 nl\minetitan\modules\banking\gui\BankingAccountTypeGUI.class
 nl\minetitan\modules\ModuleManager.class
@@ -24,6 +26,7 @@ nl\minetitan\modules\player\tasks\TimeInfoTask.class
 nl\minetitan\modules\banking\commands\BankingCommand.class
 nl\minetitan\modules\player\commands\ModCommand.class
 nl\minetitan\handler\CommandHandler.class
+nl\minetitan\modules\plots\handler\WorldGuardHandler.class
 nl\minetitan\util\NMSUtil.class
 nl\minetitan\modules\player\commands\TimeCommand.class
 nl\minetitan\modules\player\listener\PrefixGUIClick.class
@@ -38,9 +41,12 @@ nl\minetitan\modules\database\DatabaseModule.class
 nl\minetitan\handler\Nametag.class
 nl\minetitan\modules\player\listener\PlayerJoinListener.class
 nl\minetitan\modules\fitness\listeners\PlayerConsumeEvent.class
+nl\minetitan\modules\plots\commands\PlotInfoCommand.class
 nl\minetitan\modules\player\MinetopiaPlayerData.class
 nl\minetitan\modules\fitness\handler\FitnessHandler.class
+nl\minetitan\modules\plots\commands\PlotCommand.class
 nl\minetitan\modules\player\listener\BlockBecauseLoading.class
+nl\minetitan\handler\config\Configurator.class
 nl\minetitan\handler\SimpleNameTag.class
 nl\minetitan\modules\player\tasks\LuckyShardAddTask.class
 nl\minetitan\modules\player\PlayerModule.class
@@ -51,8 +57,10 @@ nl\minetitan\modules\player\gui\ChatkleurGUI.class
 nl\minetitan\modules\player\listener\InvseeListener.class
 nl\minetitan\modules\fitness\FitnessModule.class
 nl\minetitan\modules\prefix\PrefixModule.class
+nl\minetitan\modules\banking\listeners\PinListener.class
 nl\minetitan\modules\player\tasks\ScoreboardUpdateTask.class
 nl\minetitan\modules\player\listener\PlayerLogoutListener.class
+nl\minetitan\modules\banking\commands\PinCommand.class
 nl\minetitan\modules\banking\gui\BankUseGUI.class
 nl\minetitan\modules\MinetopiaModule.class
 nl\minetitan\modules\player\commands\PrefixCommand.class

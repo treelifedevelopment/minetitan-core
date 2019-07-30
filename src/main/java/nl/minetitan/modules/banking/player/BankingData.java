@@ -96,6 +96,40 @@ public class BankingData {
         return null;
     }
 
+    public boolean doesAccountExist(int id){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+            connection = Core.getInstance().getHikari().getConnection();
+            statement = connection.prepareStatement("SELECT * FROM minetopia_banking WHERE ACCOUNTID=?");
+
+            statement.setInt(1, id);
+
+            ResultSet set = statement.executeQuery();
+
+            if (set.next()){
+                return true;
+            }
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null){
+                    connection.close();
+                }
+
+                if (statement != null){
+                    statement.close();
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
+
     private int getRowCount(ResultSet resultSet) {
         if (resultSet == null) {
             return 0;

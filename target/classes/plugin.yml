@@ -13,3 +13,9 @@ commands:
     description: 'Wijzig jouw prefix!'
   chatkleur:
     description: 'Wijzig jouw chatkleur!'
+  pin:
+    description: 'Start een pinbetaling met dit commando.'
+  plot:
+    description: 'Plot commando'
+  plotinfo:
+    description: 'Plotinfo commando'

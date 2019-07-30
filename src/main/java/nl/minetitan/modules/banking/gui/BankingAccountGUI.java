@@ -36,7 +36,7 @@ public class BankingAccountGUI {
 
                 if (account.getAccountType() == type) {
 
-                    if (account.getHolder().equalsIgnoreCase(player.getUniqueId().toString())) {
+                    if (account.getHolders().contains(player.getUniqueId().toString())) {
 
                         ItemStack item = new ItemStack(account.getAccountType().getItem(), 1, (short) 0);
                         ItemMeta meta = item.getItemMeta();

@@ -10,12 +10,17 @@ import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerChatEvent;
 
 public class AsyncChatListener implements Listener {
 
     @EventHandler
     public void onChat(AsyncPlayerChatEvent e){
         MinetopiaPlayerData data = new MinetopiaPlayerData(e.getPlayer());
+
+        if (e.getMessage().contains("%")){
+            e.setMessage(e.getMessage().replaceAll("%", "%%"));
+        }
 
         e.setFormat(ChatColor.translateAlternateColorCodes('&',
 

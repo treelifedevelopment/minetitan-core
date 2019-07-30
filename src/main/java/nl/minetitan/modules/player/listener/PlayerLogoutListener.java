@@ -21,10 +21,6 @@ public class PlayerLogoutListener implements Listener {
 
         MinetopiaPlayerData data = new MinetopiaPlayerData(p.getUniqueId());
         data.saveInventory(p.getInventory());
-
-        for (ItemStack item : data.getInventoryInner()){
-            System.out.println(item);
-        }
     }
 
 }

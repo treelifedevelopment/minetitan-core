@@ -11,6 +11,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class BankingAccount {
 
@@ -155,7 +158,15 @@ public class BankingAccount {
         return null;
     }
 
-    public String getHolder(){
+    public boolean isHolder(UUID uuid){
+        if (getHolders().get(0).equalsIgnoreCase(uuid.toString())){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public List<String> getHolders(){
         Connection connection = null;
         PreparedStatement statement = null;
 
@@ -169,7 +180,21 @@ public class BankingAccount {
 
             if (set.next()) {
 
-                return set.getString("ACCOUNTHOLDER_UUID");
+                List<String> list = new ArrayList<>();
+
+                String holder = set.getString("ACCOUNTHOLDER_UUID");
+
+                if (holder.contains(";")){
+                    String[] holders = holder.split(";");
+
+                    for (String s : holders){
+                        list.add(s);
+                    }
+                }else{
+                    list.add(holder);
+                }
+
+                return list;
             }
         } catch (SQLException e) {
             e.printStackTrace();

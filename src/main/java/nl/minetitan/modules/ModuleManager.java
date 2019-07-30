@@ -11,6 +11,7 @@ import nl.minetitan.modules.banking.BankingModule;
 import nl.minetitan.modules.database.DatabaseModule;
 import nl.minetitan.modules.fitness.FitnessModule;
 import nl.minetitan.modules.player.PlayerModule;
+import nl.minetitan.modules.plots.WorldGuardModule;
 import nl.minetitan.modules.prefix.PrefixModule;
 
 public class ModuleManager implements MinetopiaModule{
@@ -30,6 +31,7 @@ public class ModuleManager implements MinetopiaModule{
         BankingModule module2 = new BankingModule();
         PrefixModule module3 = new PrefixModule();
         FitnessModule module4 = new FitnessModule();
+        WorldGuardModule module5 = new WorldGuardModule();
 
         // Starters
         module.start();
@@ -37,6 +39,7 @@ public class ModuleManager implements MinetopiaModule{
         module2.start();
         module3.start();
         module4.start();
+        module5.start();
     }
 
     @Override
@@ -47,6 +50,7 @@ public class ModuleManager implements MinetopiaModule{
         BankingModule module2 = new BankingModule();
         PrefixModule module3 = new PrefixModule();
         FitnessModule module4 = new FitnessModule();
+        WorldGuardModule module5 = new WorldGuardModule();
 
         // Stoppers
         module.stop();
@@ -54,6 +58,7 @@ public class ModuleManager implements MinetopiaModule{
         module2.stop();
         module3.stop();
         module4.stop();
+        module5.stop();
     }
 
 }

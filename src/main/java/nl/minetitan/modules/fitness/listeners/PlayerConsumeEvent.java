@@ -33,6 +33,6 @@ public class PlayerConsumeEvent implements Listener {
                 MessageKey.send(e.getPlayer(), MessageKey.PLAYER_EAT_ITEM, "Golden Apple");
             }
         }
-        }
+    }
 
 }

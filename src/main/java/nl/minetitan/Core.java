@@ -4,6 +4,8 @@ import com.zaxxer.hikari.HikariDataSource;
 import lombok.Getter;
 import lombok.Setter;
 import nl.minetitan.handler.CommandHandler;
+import nl.minetitan.handler.config.Configurator;
+import nl.minetitan.handler.enums.MessageKey;
 import nl.minetitan.interfaces.MinetopiaCommand;
 import nl.minetitan.modules.ModuleManager;
 import nl.minetitan.modules.player.MinetopiaPlayer;
@@ -31,6 +33,9 @@ public final class Core extends JavaPlugin {
     @Getter @Setter
     private Scoreboard teams;
 
+    @Getter @Setter
+    private static Configurator messages;
+
     @Override
     public void onLoad() {
         instance = this;
@@ -39,6 +44,11 @@ public final class Core extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        setMessages(new Configurator("messages.yml"));
+        getMessages().loadConfig();
+
+        MessageKey.updateMessagesFile();
+
         getConfig().options().copyDefaults(true);
         saveConfig();
 
