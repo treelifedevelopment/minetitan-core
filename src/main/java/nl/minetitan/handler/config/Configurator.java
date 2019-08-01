@@ -31,7 +31,6 @@ public class Configurator {
             e.printStackTrace ();
         }
     }
-
     public void loadConfig() {
         file = new File(plugin.getDataFolder(), fileName);
         if (!file.exists()) {

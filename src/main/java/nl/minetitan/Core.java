@@ -22,18 +22,23 @@ import java.util.HashMap;
 
 public final class Core extends JavaPlugin {
 
+
     // Instance
-    @Getter @Setter
+    @Getter
+    @Setter
     private static Core instance;
 
     // HikariCP
-    @Getter @Setter
+    @Getter
+    @Setter
     public HikariDataSource hikari;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private Scoreboard teams;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private static Configurator messages;
 
     @Override
@@ -61,6 +66,7 @@ public final class Core extends JavaPlugin {
             }
         }
     }
+
 
     @Override
     public void onDisable(){
