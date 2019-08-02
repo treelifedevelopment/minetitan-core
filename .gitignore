@@ -46,6 +46,21 @@ cmake-build-*/
 # IntelliJ
 out/
 
+# Mac
+_mac/laf.xml
+_mac/path.macros.xml
+code.style.schemes.xml
+codestyles/Default.xml
+colors.scheme.xml
+debugger.xml
+editor.xml
+filetypes.xml
+ui.lnf.xml
+lombok-plugin.xml
+vcs.xml
+ide.general.xml
+textmate_os.xml
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
